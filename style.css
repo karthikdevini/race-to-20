@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0c29;
+  background-image: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  color: white;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.glass-background {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.neon-btn-green {
+  background: #00ff99;
+  border: none;
+  color: #000;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.neon-btn-green:hover {
+  background: #00cc77;
+  box-shadow: 0 0 20px #00ff99;
+  transform: scale(1.05);
+}
+
+.neon-btn-blue {
+  background: #33ccff;
+  border: none;
+  color: #000;
+  box-shadow: 0 0 15px #33ccff;
+}
+
+.neon-btn-blue:hover {
+  background: #0099cc;
+  box-shadow: 0 0 20px #33ccff;
+  transform: scale(1.05);
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2;
+}
+
+.list-group-item {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  color: #ccc;
+}
+
+/* Responsive UI Fix for Mobile */
+@media (max-width: 576px) {
+  .glass-card {
+    padding: 20px 15px;
+  }
+
+  .btn-group .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  #status {
+    font-size: 1rem !important;
+  }
+
+  #total {
+    font-size: 2.5rem !important;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+}

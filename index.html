@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Race to 20</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/123/123392.png" type="image/png">
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <div class="glass-background d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container py-4" style="max-width: 900px;">
+      <div class="text-center animate__animated animate__fadeInDown">
+        <h1 class="display-4 fw-bold text-white glow">Race to 20</h1>
+        <p class="lead text-light">⚡ A fast-paced mental game – reach exactly 20 before your opponent does!</p>
+        <button class="btn btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#aboutModal">ℹ️ About Game</button>
+      </div>
+
+      <div class="glass-card animate__animated animate__zoomIn mt-4">
+        <div class="row">
+          <div class="col-md-6 text-center border-end border-light-subtle pe-4">
+            <h2 id="total" class="fw-bold display-5 neon-text">0</h2>
+            <p id="status" class="fs-5 text-info">Player 1's Turn</p>
+            <div class="btn-group my-3" role="group">
+              <button class="btn neon-btn-green btn-lg px-4 shadow" onclick="addNumber(1)">+1</button>
+              <button class="btn neon-btn-blue btn-lg px-4 shadow" onclick="addNumber(2)">+2</button>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-outline-light shadow-sm" onclick="resetGame()">🔄 Reset Game</button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h5 class="text-light mb-3">📜 Game History</h5>
+            <ul class="list-group list-group-flush text-light overflow-auto" style="max-height: 300px" id="history">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center text-light mt-4">
+        <p class="mb-0">🚀 Designed and Developed by Karthik Devini • 2025</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- About Game Modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">About the Game</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Race to 20</strong> is a thrilling two-player strategy game. Each player adds either 1 or 2 to a
+            shared total on their turn. The player who lands exactly on 20 wins.</p>
+          <ul>
+            <li>Players alternate turns.</li>
+            <li>Only +1 or +2 is allowed per turn.</li>
+            <li>Going over 20 means instant loss.</li>
+            <li>The goal: reach 20 exactly!</li>
+            <li>Track moves in real-time history (latest on top).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="clickSound" preload="auto">
+    <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg">
+  </audio>
+  <audio id="winSound" preload="auto">
+    <source src="https://www.fesliyanstudios.com/play-mp3/6673" type="audio/mpeg">
+  </audio>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
